@@ -1,0 +1,148 @@
+body {
+  font-family: Montserrat;
+  background-color: #383838;
+}
+
+#indexbody{
+	font-family: Montserrat;
+  background-image: url(../images/dog-bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #383838;
+}
+
+
+
+.menu{
+	background-color: #383838;
+	float:right;
+}
+
+
+
+
+
+.mainPanel{
+	font-family: Montserrat;
+	font-size:40px;
+	color: #e5e5e5;
+	float: left;
+}
+
+
+
+
+
+
+
+#meet
+{
+	font-family: Montserrat;
+	font-size:40px;
+	color: #e5e5e5;
+	background-color:#383838;
+	float:right;
+}
+
+#about
+{
+	font-family: Montserrat;
+	font-size:40px;
+	color: #e5e5e5;
+	background-color:#383838;
+	float:right;
+}
+
+
+
+#book
+{
+	font-family: Montserrat;
+	font-size:40px;
+	color: #e5e5e5;
+	background-color:#383838;
+	float:right;
+
+}
+
+#contact
+{
+	font-family: Montserrat;
+	font-size:40px;
+	color: #e5e5e5;
+	background-color:#383838;
+	float:right;
+}
+
+
+a{
+ text-decoration: none;
+ font-size: 30px;
+ padding: 20px;
+
+}
+
+a:link {
+	text-decoration: none;
+    background-color: #383838;
+    color: #e5e5e5
+}
+
+a:visited {
+    color: #e5e5e5;
+    text-decoration: none;
+    background-color: #383838;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #383838;
+	background-color: #e5e5e5;
+}
+
+
+
+
+
+
+
+#meet,#about,#contact,#home,#meet
+{
+	font-family: Montserrat;
+	font-size:40px;
+	color: #e5e5e5;
+	background-color:#383838;
+	float:left;
+}
+
+
+
+
+a{
+ text-decoration: none;
+ font-size: 30px;
+ padding: 20px;
+
+}
+
+a:link {
+	text-decoration: none;
+    background-color: #383838;
+}
+
+a:visited {
+    color: #e5e5e5;
+    text-decoration: none;
+    background-color: #383838;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #383838;
+	background-color: #e5e5e5;
+}
+
+
+
