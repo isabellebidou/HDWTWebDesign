@@ -1,32 +1,46 @@
+.topBar{
+	background-color: #EBEBEB;
+}
+
+
+.logo{
+	
+	font-family: Libre Baskerville;
+	font-size:40px;
+	padding:10px;
+	float: left;
+	
+}
+
 
 
  a {
 	text-decoration: none;
-	font-size: 30px;
+	font-size: 20px;
 	padding: 20px;
 }
 
  a:link {
 	text-decoration: none;
-	background-color: #383838;
-	color: #FFFFFF;
+	background-color: #EBEBEB;
+	color: #383838;
 }
 
 a:visited {
-	color: #e5e5e5;
+	color: #383838;
 	text-decoration: none;
-	background-color: #383838;
+	background-color: #EBEBEB;
 }
 
 a:hover {
 	text-decoration: none;
-	color: #383838;
-	background-color: #e5e5e5;
+	color: #878787;
+	background-color: #EBEBEB;
 }
 
 body {
 	font-family: Montserrat;
-	background-color: #383838;
+	background-color: #EBEBEB;
 }
 
 button {
@@ -69,24 +83,27 @@ button {
 
 #indexbody {
 	font-family: Montserrat;
-	background-image: url(../images/dog-bg.jpg);
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
-	background-color: #383838;
+	background-color: #EBEBEB;
 }
 
 .menu {
-	background-color: #383838;
+	background-color: #EBEBEB;
 	float: right;
 }
 
 .mainPanel {
 	font-family: Montserrat;
+	background-image: url(../images/newbg.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	width:100%;
+	height:500px;
 	font-size: 40px;
-	color: #e5e5e5;
+	color: #EBEBEB;
 	float: left;
+	clear: both;
 }
 
 #home {
