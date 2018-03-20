@@ -4,7 +4,9 @@ var mobileMenuDiv=false;
 function initialize(){
 	console.log("initialize!");
 	mobileMenuDiv= document.getElementById("mobilemenu");
-	
+	mobileMenuDiv.style.display="none";
+	var x = "Total Width: " + screen.width + "px";
+	console.log(x);
 }
 
 function toggleMenu(){

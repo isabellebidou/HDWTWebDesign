@@ -125,29 +125,30 @@ button {
 }
 
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 800px){
+
 	
-	 a {
+a {
 	text-decoration: none;
 	font-size: 1em;
 	padding: 1em;
 }
 
- a:link {
+a:link {
 	text-decoration: none;
 	background-color: transparent;
 	color: #383838;
 }
 
 a:visited {
-	color: #e5e5e5;
+	color: #383838;
 	text-decoration: none;
-	background-color: #383838;
+	background-color: #B2B2B2;
 }
 
 a:hover {
 	text-decoration: none;
-	color: #B2B2B2;
+	color: #666666;
 	background-color: transparent;
 }
 
@@ -156,7 +157,7 @@ a:hover {
 
 		display: none;
 	}
-	#mobilemenu {
+#mobilemenu {
 		position: fixed;
 		top: 3em;
 		right: 0.5em;
@@ -174,7 +175,7 @@ a:hover {
 		border-radius: 10%
 	}
 
-	#menubutton {
+#menubutton {
 		position: fixed;
 		top: 1em;
 		right: 0.5em;
