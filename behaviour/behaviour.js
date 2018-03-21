@@ -28,3 +28,7 @@ function closeMenu(){
 	}
 	
 }
+
+function resize(){
+	location.reload(true);
+}
