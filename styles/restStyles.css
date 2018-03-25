@@ -1,3 +1,6 @@
+
+
+
 .topBar{
 	background-color: #EBEBEB;
 }
@@ -5,13 +8,12 @@
 
 .logo{
 	
-	font-family: Libre Baskerville;
+	font-family: Cormorant Garamond;
 	font-size:40px;
 	padding:10px;
 	float: left;
 	
 }
-
 
 
  a {
@@ -21,19 +23,17 @@
 }
 
  a:link {
-	text-decoration: none;
 	background-color: #EBEBEB;
-	color: #383838;
+	color: #383838
+;
 }
 
 a:visited {
 	color: #383838;
-	text-decoration: none;
 	background-color: #EBEBEB;
 }
 
 a:hover {
-	text-decoration: none;
 	color: #878787;
 	background-color: #EBEBEB;
 }
@@ -91,9 +91,11 @@ button {
 	float: right;
 }
 
-.mainPanel {
-	font-family: Montserrat;
-	background-image: url(../images/newbg.jpg);
+.homePanel {
+	font-family: Cormorant Garamond;
+	background: linear-gradient(
+      rgba(0, 10, 200, 0.2),
+      rgba(0, 10, 200, 0.2)), url(../images/newbg.jpg);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -101,9 +103,24 @@ button {
 	width:100%;
 	height:500px;
 	font-size: 40px;
-	color: #EBEBEB;
+	color: #FDFDFD;
+	text-align : center;
 	float: left;
 	clear: both;
+}
+
+
+.panel {
+	font-family: Cormorant Garamond;
+	font-size: 40px;
+	color: #FDFDFD;
+	margin-left: auto;
+	margin-right: auto;
+	text-align : center;
+	width: 100%;
+	float: left;
+	clear: both;
+	
 }
 
 #home {
@@ -201,3 +218,24 @@ a:hover {
 	}
 
 }
+
+
+
+.grid-container {
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns: auto auto auto auto;
+  background-color: #EBEBEB;
+  padding: 10px;
+}
+
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #383838;
+  padding: 20px;
+  color: #383838;
+  font-size: 30px;
+  text-align: center;
+}
+
