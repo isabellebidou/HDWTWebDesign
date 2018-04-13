@@ -6,12 +6,14 @@
 		<link rel = "stylesheet" type = "text/css" href = "styles/restStyles.css">
 		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 		<script type="text/javascript" src="behaviour/behaviour.js"></script>
-
+		<style>
+			html, body, #map {height:100%;width:100%;margin:0;padding:0;}
+		</style>
 	</head>
 
 	<body onresize="resize();">
 
-		<div class= "navdiv">
+	<div class= "navdiv">
 
 			<button id="menubutton" onmouseover  ="toggleMenu();">
 				menu
@@ -67,20 +69,47 @@
 		</div>
 		
 
-
-		<div class = "panel">
+	<div class = "panel contactPanel">
 			
 			<br>
-			
-			<div class = "leftPanel">
+					
+
 				
-				Map Here
+			<div class = "leftPanel">
+				<div id="map"></div>
+				<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+				<script type="text/javascript">
+							var element = document.getElementById("map"); 
+							var map = new google.maps.Map(element, {
+								center: new google.maps.LatLng(53.3489867,-6.2434582),
+								zoom: 16,
+								mapTypeId: "OSM",
+								mapTypeControl: true,
+								streetViewControl: true}); 
+							map.mapTypes.set("OSM", new google.maps.ImageMapType({
+								getTileUrl: function(coord, zoom) {
+									var tilesPerGlobe = 1 << zoom;
+									var x = coord.x % tilesPerGlobe;
+									if (x < 0) {
+										x = tilesPerGlobe+x;}
+									return "http://tile.openstreetmap.org/" + zoom + "/" + x + "/" + coord.y + ".png";
+								},
+								tileSize: new google.maps.Size(256, 256),
+								name: "OpenStreetMap",
+								maxZoom: 18
+							}));
+				</script>
+				
 				
 			</div>
 			
 			<div class = "rightPanel">
 				
-				Address here
+				<p style="padding-top: 15%;"> Doggy Walks </p>
+				<p>IFSC</p>
+				<p>Mayor Street, North Dock</p>
+				<p>Dublin 1, D01 Y300</p>
+				<p></p>
 				
 			</div>
 			
