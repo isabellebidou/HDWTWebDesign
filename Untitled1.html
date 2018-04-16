@@ -1,29 +1,121 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        
-        
-    </head>
-    
-    
-    <body>
-        
-        <h1>Grid Lines</h1>
+	<head>
+		<title>Dog Walking | Meet The Team</title>
 
-        <div class="grid-container">
-          <div class="item1">1</div>
-          <div class="item2">2</div>
-          <div class="item3">3</div>  
-          <div class="item4">4</div>
-          <div class="item5">5</div>
-          <div class="item6">6</div>
-          <div class="item7">7</div>
-          <div class="item8">8</div>  
-        </div>
-        
-    </body>
-    
-    
-    
-    
+		<link rel = "stylesheet" type = "text/css" href = "styles/restStyles.css">
+		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css?family=Libre Baskerville' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css?family=Cormorant Garamond' rel='stylesheet'>
+		<script type="text/javascript" src="behaviour/behaviour.js"></script>
+
+	</head>
+
+	<body onresize="resize();">
+
+		<div class= "navdiv">
+
+			<button id="menubutton" onmouseover  ="toggleMenu();">
+				menu
+			</button>
+			<div id="mobilemenu" onmouseout="closeMenu();">
+				<ul id="mobilemenuul">
+					<li >
+						<a href='index.html'  class="toplinks"onclick  ="toggleMenu();">Home</a>
+					</li>
+					<li>
+						<a href='book.html' class="toplinks" onclick  ="toggleMenu();">Book Online</a>
+					</li>
+					<li>
+						<a href='meet.html' class="toplinks" onclick  ="toggleMenu();">Meet The Team</a>
+					</li>
+					<li>
+						<a href='about.html'class="toplinks" onclick  ="toggleMenu();">About</a>
+					</li>
+					<li>
+						<a href="contact.html" class="toplinks" onclick  ="toggleMenu();">Contact</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class = "topBar">
+
+				<div class = "logo">
+
+					<a href="index.html"><img src="images/logo.jpg" alt="logo" style="width:250px;height:75px;"></a>
+
+				</div>
+
+				<div class = "menu">
+					<div id="home">
+						<a href = 'index.html'>Home</a>
+					</div>
+					<div id="book">
+						<a href = 'book.html'>Book Online</a>
+					</div>
+					<div id="meet">
+						<a href = '#'>Meet The Team</a>
+					</div>
+					<div id="about">
+						<a href = 'about.html'>About</a>
+					</div>
+					<div id="contact">
+						<a href = "contact.html">Contact</a>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+		<div class = "panel">
+			<br>
+			
+				<div class = "itemhols">
+
+				<div class = "itemholsIm"><img src = "images/girl3.jpg"></div>
+				
+				<div class = "itemholsIm"><img src = "images/girl4.jpg"></div>
+				
+				<div class = "itemholsIm"><img src = "images/girl7.jpg"></div>
+				
+					
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					
+					
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				
+					
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				
+
+				</div>
+			
+
+			<div id= "verticalGrid">
+
+				<div class = "grid-container">
+
+					<div class="grid-item"><img src = "images/girl1.jpg">
+					</div>
+					<div class="grid-item">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					</div>
+					<div class="grid-item"><img src = "images/boy1.jpg">
+					</div>
+					<div class="grid-item">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					</div>
+					<div class="grid-item"><img src = "images/boy2.jpg">
+					</div>
+					<div class="grid-item">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+
+	</body>
+
 </html>
