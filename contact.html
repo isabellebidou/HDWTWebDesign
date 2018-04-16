@@ -7,7 +7,7 @@
 		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 		<script type="text/javascript" src="behaviour/behaviour.js"></script>
 		<style>
-			html, body, #map {height:100%;width:100%;margin:0;padding:0;}
+			html, body, #map {height:100%;width:100%;margin:0;padding:0;}  <!-- this is used to show the map inside its own div -->
 		</style>
 	</head>
 
@@ -75,14 +75,14 @@
 					
 
 				
-			<div class = "leftPanel">
+			<div class = "leftPanel"> <!-- this panel is used to show the location of the offices-->
 				<div id="map"></div>
-				<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+				<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>  <!-- Here the script is loaded-->
 				<script type="text/javascript">
 							var element = document.getElementById("map"); 
 							var map = new google.maps.Map(element, {
-								center: new google.maps.LatLng(53.3489867,-6.2434582),
-								zoom: 16,
+								center: new google.maps.LatLng(53.3489867,-6.2434582), <!-- we insert the default values of the location -->
+								zoom: 16,   <!-- zoom level is entered to show the position appropriately-->
 								mapTypeId: "OSM",
 								mapTypeControl: true,
 								streetViewControl: true}); 
@@ -103,9 +103,9 @@
 				
 			</div>
 			
-			<div class = "rightPanel">
+			<div class = "rightPanel"> <!-- The addresss is showed in this panel-->
 				
-				<p style="padding-top: 15%;"> Doggy Walks </p>
+				<p style="padding-top: 15%;"> Doggy Walks </p>  <!-- Some space is entered as a padding to center the text -->
 				<p>IFSC</p>
 				<p>Mayor Street, North Dock</p>
 				<p>Dublin 1, D01 Y300</p>

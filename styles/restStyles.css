@@ -120,6 +120,7 @@ button {
 	clear: both;
 }
 .contactPanel {
+	 /* This panel is used in the contact html to show the backgorund image properly */
 	height:50%;
 	background: url(../images/dog_on_leash.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
@@ -223,7 +224,7 @@ button {
 }
 
 .leftPanel {
-
+ /* This panel is used in the contact html left side to show the info properly */
 	width: 45%;
 	margin: 10px;
 	float: left;
@@ -232,7 +233,7 @@ button {
 }
 
 .rightPanel {
-
+ /* This panel is used in the contact html right side to show the info properly */
 	width: 45%;
 	margin: 10px;
 	float: right;
