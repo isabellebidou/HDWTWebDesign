@@ -9,34 +9,25 @@
 		<link href='https://fonts.googleapis.com/css?family=Cormorant Garamond' rel='stylesheet'>
 		<script type="text/javascript" src="behaviour/behaviour.js"></script>
 
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<!--Specifies the character encoding for the document-->
+		<meta name="msapplication-TileImage" content="images/paw.png">
+		<!--touch icons-->
+		<link rel="apple-touch-icon-precomposed" href="images/paw.png">
+		<!--touch icons-->
+		<link rel="icon" href="images/paw.png">
+		<!--icons at in the browser bar-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--viewport to handle mobile devices-->
+
 	</head>
+	<!-- this is used to refresh the page if resized to make sure the media queries are handled in an optimised manner
+	the method is in the  behaviour.js file-->
 
 	<body onresize="resize();">
 
 		<div class= "navdiv">
-
-			<button id="menubutton" onmouseover  ="toggleMenu();">
-				menu
-			</button>
-			<div id="mobilemenu" onmouseout="closeMenu();">
-				<ul id="mobilemenuul">
-					<li >
-						<a href='index.html'  class="toplinks"onclick  ="toggleMenu();">Home</a>
-					</li>
-					<li>
-						<a href='book.html' class="toplinks" onclick  ="toggleMenu();">Book Online</a>
-					</li>
-					<li>
-						<a href='meet.html' class="toplinks" onclick  ="toggleMenu();">Meet The Team</a>
-					</li>
-					<li>
-						<a href='about.html'class="toplinks" onclick  ="toggleMenu();">About</a>
-					</li>
-					<li>
-						<a href="contact.html" class="toplinks" onclick  ="toggleMenu();">Contact</a>
-					</li>
-				</ul>
-			</div>
+			
 
 			<div class = "topBar">
 
@@ -79,17 +70,33 @@
 					<div class="grid-item"><img src = "images/girl7.jpg">
 					</div>
 					<div class="grid-item">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						<h1>Dawn</h1>
+						<p>
+							Is a freelance writer and yoga instructor her schedule is flexible and she is available to walk your dogs in the morning.
+						</p>
 					</div>
 					<div class="grid-item">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						<h1>Julie</h1>
+
+						<p>
+							Is a Psychologist Student with a passion of horse riding. She leaves at her parents and they are the happy owners of 2 lovely English setters. Her family has had dogs since her early childhood. She is available on Thursdays, Fridays and Saturdays all day.
+						</p>
+
 					</div>
 					<div class="grid-item">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						<h1>Siobhan</h1>
+						<p>
+							Is a mummy with 2 small kids. Her family owns a Boxer. She is available to walk your dogs everyday during school hours.
+						</p>
 					</div>
 
 				</div>
 			</div>
+
+			<!-- the swapping of the  horizontalGrid and the  verticalGrid divs
+			is used to make the website responsive. the verticalGrid will show
+			for devices in portrait mode  and the horizontal grid will show for
+			desktops-->
 
 			<div id= "verticalGrid">
 
@@ -98,24 +105,62 @@
 					<div class="grid-item"><img src = "images/girl3.jpg">
 					</div>
 					<div class="grid-item">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						<h1>Dawn</h1>
+						<p class="meetp">
+							Is a freelance writer and yoga instructor her schedule is flexible and she is available to walk your dogs in the morning.
+						</p>
 					</div>
-					<div class="grid-item"><img src = "images/girl4.jpg">
-					</div>
-					<div class="grid-item">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					</div>
-					<div class="grid-item"><img src = "images/girl7.jpg">
-					</div>
-					<div class="grid-item">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					</div>
+				</div>
+				<div class="grid-item"><img src = "images/girl4.jpg">
+				</div>
+				<div class="grid-item">
+					<h1>Julie</h1>
 
+					<p class="meetp">
+						Is a Psychologist Student with a passion of horse riding. She leaves at her parents and they are the happy owners of 2 lovely English setters. Her family has had dogs since her early childhood. She is available on Thursdays, Fridays and Saturdays all day.
+					</p>
+				</div>
+				<div class="grid-item"><img src = "images/girl7.jpg">
+				</div>
+				<div class="grid-item">
+					<h1>Siobhan</h1>
+					<p class="mmeetp">
+						Is a mummy with 2 small kids. Her family owns a Boxer. She is available to walk your dogs everyday during school hours.
+					</p>
 				</div>
 			</div>
 
 		</div>
+	
+<!--navigation section  do not move-->
 
+		<!-- the menubutton only shows for devices under 800px  it is used to display the menu-->
+		
+		<!-- the menubutton only shows for devices under 800px  it is used to display the menu-->
+			<button id="menubutton" onmouseover  ="toggleMenu();">
+				menu
+			</button>
+			<div id="mobilemenu" onmouseout="closeMenu();">
+				<!-- the mobilemenuul list is swapped with the menu div  for devices under 800px with a media query-->
+				<ul id="mobilemenuul">
+					<li >
+						<a href='#'  class="toplinks"onclick  ="toggleMenu();">Home</a>
+					</li>
+					<li>
+						<a href='book.html' class="toplinks" onclick  ="toggleMenu();">Book Online</a>
+					</li>
+					<li>
+						<a href='meet.html' class="toplinks" onclick  ="toggleMenu();">Meet The Team</a>
+					</li>
+					<li>
+						<a href='about.html'class="toplinks" onclick  ="toggleMenu();">About</a>
+					</li>
+					<li>
+						<a href="contact.html" class="toplinks" onclick  ="toggleMenu();">Contact</a>
+					</li>
+				</ul>
+			</div>
+<!-- end of navigation section -->
 	</body>
 
 </html>

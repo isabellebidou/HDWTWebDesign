@@ -6,44 +6,40 @@
 		<link rel = "stylesheet" type = "text/css" href = "styles/restStyles.css">
 		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 		<script type="text/javascript" src="behaviour/behaviour.js"></script>
+		<!--Specifies the character encoding for the document-->
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+		<!--touch icons-->
+		<meta name="msapplication-TileImage" content="images/paw.png">
+		<!--touch icons-->
+		<link rel="apple-touch-icon-precomposed" href="images/paw.png">
+		<!--icons at in the browser bar-->
+		<link rel="icon" href="images/paw.png">
+		<!--viewport to handle mobile devices-->
+		<!-- this is used to show the map inside its own div -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 		<style>
-			html, body, #map {height:100%;width:100%;margin:0;padding:0;}  <!-- this is used to show the map inside its own div -->
+			html, body, #map {
+				height: 100%;
+				width: 100%;
+				margin: 0;
+				padding: 0;
+			}
 		</style>
 	</head>
-
+	<!-- this is used to refresh the page if resized to make sure the media queries are handled in an optimised manner
+	the method is in the  behaviour.js file-->
 	<body onresize="resize();">
 
-	<div class= "navdiv">
-
-			<button id="menubutton" onmouseover  ="toggleMenu();">
-				menu
-			</button>
-			<div id="mobilemenu" onmouseout="closeMenu();">
-				<ul id="mobilemenuul">
-					<li >
-						<a href='index.html'  class="toplinks"onclick  ="toggleMenu();">Home</a>
-					</li>
-					<li>
-						<a href='book.html' class="toplinks" onclick  ="toggleMenu();">Book Online</a>
-					</li>
-					<li>
-						<a href='meet.html' class="toplinks" onclick  ="toggleMenu();">Meet The Team</a>
-					</li>
-					<li>
-						<a href='about.html'class="toplinks" onclick  ="toggleMenu();">About</a>
-					</li>
-					<li>
-						<a href="contact.html" class="toplinks" onclick  ="toggleMenu();">Contact</a>
-					</li>
-				</ul>
-			</div>
+		<div class= "navdiv">
 
 			<div class = "topBar">
-			
+
 				<div class = "logo">
-					
+
 					<a href="index.html"><img src="images/logo.jpg" alt="logo" style="width:250px;height:75px;"></a>
-					
+
 				</div>
 
 				<div class = "menu">
@@ -63,57 +59,95 @@
 						<a href = 'contact.html'>Contact</a>
 					</div>
 				</div>
-			
+
 			</div>
 
 		</div>
-		
 
-	<div class = "panel contactPanel">
-			
+		<div class = "panel contactPanel">
+
 			<br>
-					
 
-				
-			<div class = "leftPanel"> <!-- this panel is used to show the location of the offices-->
+			<div class = "leftPanel">
+				<!-- this panel is used to show the location of the offices-->
 				<div id="map"></div>
-				<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>  <!-- Here the script is loaded-->
+				<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+				<!-- Here the script is loaded-->
 				<script type="text/javascript">
-							var element = document.getElementById("map"); 
-							var map = new google.maps.Map(element, {
-								center: new google.maps.LatLng(53.3489867,-6.2434582), <!-- we insert the default values of the location -->
-								zoom: 16,   <!-- zoom level is entered to show the position appropriately-->
-								mapTypeId: "OSM",
-								mapTypeControl: true,
-								streetViewControl: true}); 
-							map.mapTypes.set("OSM", new google.maps.ImageMapType({
-								getTileUrl: function(coord, zoom) {
-									var tilesPerGlobe = 1 << zoom;
-									var x = coord.x % tilesPerGlobe;
-									if (x < 0) {
-										x = tilesPerGlobe+x;}
-									return "http://tile.openstreetmap.org/" + zoom + "/" + x + "/" + coord.y + ".png";
-								},
-								tileSize: new google.maps.Size(256, 256),
-								name: "OpenStreetMap",
-								maxZoom: 18
-							}));
+					var element = document.getElementById("map");
+					var map = new google.maps.Map(element, {
+						center : new google.maps.LatLng(53.3489867, -6.2434582), /* we insert the default values of the location */
+						zoom : 16, /* zoom level is entered to show the position appropriately*/
+						mapTypeId : "OSM",
+						mapTypeControl : true,
+						streetViewControl : true
+					});
+					map.mapTypes.set("OSM", new google.maps.ImageMapType({
+						getTileUrl : function(coord, zoom) {
+							var tilesPerGlobe = 1 << zoom;
+							var x = coord.x % tilesPerGlobe;
+							if (x < 0) {
+								x = tilesPerGlobe + x;
+							}
+							return "http://tile.openstreetmap.org/" + zoom + "/" + x + "/" + coord.y + ".png";
+						},
+						tileSize : new google.maps.Size(256, 256),
+						name : "OpenStreetMap",
+						maxZoom : 18
+					}));
 				</script>
-				
-				
+
 			</div>
-			
-			<div class = "rightPanel"> <!-- The addresss is showed in this panel-->
-				
-				<p style="padding-top: 15%;"> Doggy Walks </p>  <!-- Some space is entered as a padding to center the text -->
-				<p>IFSC</p>
-				<p>Mayor Street, North Dock</p>
-				<p>Dublin 1, D01 Y300</p>
-				<p></p>
-				
+
+			<div class = "rightPanel">
+				<!-- The addresss is showed in this panel-->
+
+				<p style="padding-top: 15%;">
+					Doggy Walks
+				</p>
+				<!-- Some space is entered as a padding to center the text -->
+				<p>
+					IFSC
+				</p>
+				<p>
+					Mayor Street, North Dock
+				</p>
+				<p>
+					Dublin 1, D01 Y300
+				</p>
+
 			</div>
-			
+
 		</div>
+		<!--navigation section  do not move-->
+
+		<!-- the menubutton only shows for devices under 800px  it is used to display the menu-->
+		<button id="menubutton" onmouseover  ="toggleMenu();">
+			menu
+		</button>
+		<div id="mobilemenu" onmouseout="closeMenu();">
+
+			<!-- the mobilemenuul list is swapped with the menu div  for devices under 800px with a media query-->
+			<ul id="mobilemenuul">
+				<li >
+					<a href='index.html'  class="toplinks"onclick  ="toggleMenu();">Home</a>
+				</li>
+				<li>
+					<a href='book.html' class="toplinks" onclick  ="toggleMenu();">Book Online</a>
+				</li>
+				<li>
+					<a href='meet.html' class="toplinks" onclick  ="toggleMenu();">Meet The Team</a>
+				</li>
+				<li>
+					<a href='about.html'class="toplinks" onclick  ="toggleMenu();">About</a>
+				</li>
+				<li>
+					<a href="contact.html" class="toplinks" onclick  ="toggleMenu();">Contact</a>
+				</li>
+			</ul>
+		</div>
+
+		<!-- end of navigation section -->
 
 	</body>
 
