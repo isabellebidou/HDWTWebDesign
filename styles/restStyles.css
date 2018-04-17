@@ -99,7 +99,7 @@ button {
 	background-attachment: fixed;
 	background-size: cover;
 	padding: 4em;
-	max-width: 100%;
+	width: 100%;
 	height: auto;
 	font-size: 40px;
 	color: #FDFDFD;
@@ -327,12 +327,15 @@ img:hover {
 	filter: alpha(opacity=100); /* For IE8 and earlier */
 }
 
-h2, h3 {
+h1, h2, h3 {
 
 	opacity: 0.9;
+	text-align: center;
 }
 
 /* added spacing to table for booking form */
+
+
 
 table {
 	border-spacing: 10px;
