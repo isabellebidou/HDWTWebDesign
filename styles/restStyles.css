@@ -118,6 +118,8 @@ button {
 	width: 100%;
 	float: left;
 	clear: both;
+	height:50%;
+	position:absolute;
 }
 .contactPanel {
 	/* This panel is used in the contact html to show the backgorund image properly */
@@ -164,12 +166,25 @@ button {
 }
 
 #verticalGrid {
+		visibility: hidden;
+        height: 0%;
+        width: 0%;
+}
+
+#verticalGrid> div{
 	visibility: hidden;
 	height: 0%;
+    width: 0%;
+	
+        
+	
 }
 
 #horizontalGrid {
-	visibility: visible;
+		visibility: visible;
+        position: absolute;
+        background-color: #EBEBEB;
+        top: 5em;
 }
 
 #formContainer {
@@ -337,6 +352,10 @@ h2, h3 {
 table {
 	border-spacing: 10px;
 }
+
+
+
+
 @media screen and (max-width: 800px) {
 	#contactForm {
 		width: 100%;
@@ -516,6 +535,13 @@ input[type=submit],input[type=reset] {
 		height: 0%;
 		width: 0%;
 	}
+	
+	#verticalGrid> div{
+	visibility: visible;
+        width: 100%;
+		height: auto;
+	
+}
 
 	.grid-container {
 		height: auto;
@@ -532,6 +558,8 @@ input[type=submit],input[type=reset] {
 		color: #383838;
 		font-size: 20px;
 		text-align: center;
+		width: 100%;
+		height: auto;
 	}
 
 	.grid-container > img {
