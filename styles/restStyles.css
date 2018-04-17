@@ -119,7 +119,7 @@ button {
 	float: left;
 	clear: both;
 	height:50%;
-	position:absolute;
+	
 }
 .contactPanel {
 	/* This panel is used in the contact html to show the backgorund image properly */
