@@ -6,35 +6,21 @@
 		<link rel = "stylesheet" type = "text/css" href = "styles/restStyles.css">
 		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 		<script type="text/javascript" src="behaviour/behaviour.js"></script>
+		
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /><!--Specifies the character encoding for the document-->
+		<meta name="msapplication-TileImage" content="images/paw.png"><!--touch icons-->
+		<link rel="apple-touch-icon-precomposed" href="images/paw.png"><!--touch icons-->
+		<link rel="icon" href="images/paw.png"><!--icons at in the browser bar-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--viewport to handle mobile devices-->
 
 	</head>
-
+	<!-- this is used to refresh the page if resized to make sure the media queries are handled in an optimised manner 
+		the method is in the  behaviour.js file-->
 	<body onresize="resize();">
 
 		<div class= "navdiv">
 
-			<button id="menubutton" onmouseover  ="toggleMenu();">
-				menu
-			</button>
-			<div id="mobilemenu" onmouseout="closeMenu();">
-				<ul id="mobilemenuul">
-					<li >
-						<a href='index.html'  class="toplinks"onclick  ="toggleMenu();">Home</a>
-					</li>
-					<li>
-						<a href='book.html' class="toplinks" onclick  ="toggleMenu();">Book Online</a>
-					</li>
-					<li>
-						<a href='meet.html' class="toplinks" onclick  ="toggleMenu();">Meet The Team</a>
-					</li>
-					<li>
-						<a href='about.html'class="toplinks" onclick  ="toggleMenu();">About</a>
-					</li>
-					<li>
-						<a href="contact.html" class="toplinks" onclick  ="toggleMenu();">Contact</a>
-					</li>
-				</ul>
-			</div>
 
 			<div class = "topBar">
 
@@ -65,62 +51,107 @@
 			</div>
 
 		</div>
+		
+		
 
 		<div class = "panel">
 
 			
 			<div id = "formContainer">
-
 				<form id= "contactForm">
 					<table id="contactTable">
 						<tr>
-							<td class="leftTd">Full Name</td>
+							<td class="leftTd">Full Name : </td>
 							<td>
 							<input name = "name" type = "text" size = "60" />
 							</td>
 						</tr>
-						<td class="leftTd">Email</td>
+						<tr>
+						<td class="leftTd">Email : </td>
+						
+						<h1>Booking Form</h1>
+						<br>
+						<h2>Fill out the form below to book a dog walker!</h2>
+						<br>
 						<td>
 						<input email = "email" type = "text" size = "60" />
 						</td>
 						</tr>
-						<td class="leftTd">Phone number</td>
+						<tr>
+						<td class="leftTd">Phone number : </td>
 						<td>
 						<input phone = "phone" type = "text" size = "60" />
 						</td>
 						</tr>
-						<td class="leftTd" >Dog name(s)</td>
+						<tr>
+						<td class="leftTd" >Dog name(s) : </td>
 						<td>
 						<input dog = "dog" type = "text" size = "60" />
 						</td>
 						</tr>
-						<td class="leftTd" >Booking Date/Time</td>
+						<tr>
+						<td class="leftTd" >Booking Date/Time : </td>
 						<td>
 						<input date/time = "date/time" type = "date" size = "60" /><br />
 						<input date/time = "date/time" type = "time" size = "60" />
 						</td>
 						</tr>
-						<td class="leftTd" >Pickup Address</td>
+						<tr>
+						<td class="leftTd" >Pickup Address : </td>
 						<td>
 						<input address = "address" type = "text" size = "60" style="height:80px"/>
 						</td>
 						</tr>
-						<td class="leftTd" >Additional Message</td>
+						<tr>
+						<td class="leftTd" >Additional Message : </td>
 						<td>
 						<input message = "message" type = "text" size = "60" style="height:100px" />
 						</td>
 						</tr>
+						<tr>
 						<td></td>
 						<td>
 						<input type="submit" value="Submit">
+						<br>
 						<input type="reset" value="Reset">
 						</td>
+						</tr>
 					</table>
 				</form>
 
 			</div>
 
 		</div>
+		
+		<!--navigation section  do not move-->
+
+		<!-- the menubutton only shows for devices under 800px  it is used to display the menu-->
+		
+		<!-- the menubutton only shows for devices under 800px  it is used to display the menu-->
+			<button id="menubutton" onmouseover  ="toggleMenu();">
+				menu
+			</button>
+			<div id="mobilemenu" onmouseout="closeMenu();">
+				<!-- the mobilemenuul list is swapped with the menu div  for devices under 800px with a media query-->
+				<ul id="mobilemenuul">
+					<li >
+						<a href='index.html'  class="toplinks"onclick  ="toggleMenu();">Home</a>
+					</li>
+					<li>
+						<a href='book.html' class="toplinks" onclick  ="toggleMenu();">Book Online</a>
+					</li>
+					<li>
+						<a href='meet.html' class="toplinks" onclick  ="toggleMenu();">Meet The Team</a>
+					</li>
+					<li>
+						<a href='about.html'class="toplinks" onclick  ="toggleMenu();">About</a>
+					</li>
+					<li>
+						<a href="contact.html" class="toplinks" onclick  ="toggleMenu();">Contact</a>
+					</li>
+				</ul>
+			</div>
+<!-- end of navigation section -->
 
 	</body>
 

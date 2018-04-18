@@ -9,34 +9,25 @@
 		<link href='https://fonts.googleapis.com/css?family=Cormorant Garamond' rel='stylesheet'>
 		<script type="text/javascript" src="behaviour/behaviour.js"></script>
 
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<!--Specifies the character encoding for the document-->
+		<meta name="msapplication-TileImage" content="images/paw.png">
+		<!--touch icons-->
+		<link rel="apple-touch-icon-precomposed" href="images/paw.png">
+		<!--touch icons-->
+		<link rel="icon" href="images/paw.png">
+		<!--icons at in the browser bar-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--viewport to handle mobile devices-->
+
 	</head>
+	<!-- this is used to refresh the page if resized to make sure the media queries are handled in an optimised manner
+	the method is in the  behaviour.js file-->
 
 	<body onload="initialize();" onresize="resize();" id= "indexbody">
 
 		<div>
-
-			<button id="menubutton" onmouseover  ="toggleMenu();">
-				menu
-			</button>
-			<div id="mobilemenu" onmouseout="closeMenu();">
-				<ul id="mobilemenuul">
-					<li >
-						<a href='#'  class="toplinks"onclick  ="toggleMenu();">Home</a>
-					</li>
-					<li>
-						<a href='book.html' class="toplinks" onclick  ="toggleMenu();">Book Online</a>
-					</li>
-					<li>
-						<a href='meet.html' class="toplinks" onclick  ="toggleMenu();">Meet The Team</a>
-					</li>
-					<li>
-						<a href='about.html'class="toplinks" onclick  ="toggleMenu();">About</a>
-					</li>
-					<li>
-						<a href="contact.html" class="toplinks" onclick  ="toggleMenu();">Contact</a>
-					</li>
-				</ul>
-			</div>
+			
 
 			<div class = "topBar">
 
@@ -67,13 +58,45 @@
 			</div>
 
 		</div>
+		<div class="container">
 
 		<div class = "homePanel">
 			<br>
 			<h2>Dog Walking Made Easy</h2>
 			<h3>Welcome to the nation's largest network of dog walkers</h3>
 		</div>
+		
+		</div>
+		
+		<!--navigation section  do not move-->
 
+		
+		
+		<!-- the menubutton only shows for devices under 800px  it is used to display the menu-->
+			<button id="menubutton" onmouseover  ="toggleMenu();">
+				menu
+			</button>
+			<div id="mobilemenu" onmouseout="closeMenu();">
+				<!-- the mobilemenuul list is swapped with the menu div  for devices under 800px with a media query-->
+				<ul id="mobilemenuul">
+					<li >
+						<a href='#'  class="toplinks"onclick  ="toggleMenu();">Home</a>
+					</li>
+					<li>
+						<a href='book.html' class="toplinks" onclick  ="toggleMenu();">Book Online</a>
+					</li>
+					<li>
+						<a href='meet.html' class="toplinks" onclick  ="toggleMenu();">Meet The Team</a>
+					</li>
+					<li>
+						<a href='about.html'class="toplinks" onclick  ="toggleMenu();">About</a>
+					</li>
+					<li>
+						<a href="contact.html" class="toplinks" onclick  ="toggleMenu();">Contact</a>
+					</li>
+				</ul>
+			</div>
+<!-- end of navigation section -->
 	</body>
 
 </html>

@@ -1,7 +1,6 @@
-
-body{
-	width:100%;
-	height:100%;
+body {
+	width: 100%;
+	height: 100%;
 }
 
 .topBar {
@@ -14,6 +13,10 @@ body{
 	font-size: 40px;
 	padding: 10px;
 	float: left;
+}
+
+.container {
+	background-image: none;
 }
 
 a {
@@ -45,13 +48,13 @@ body {
 button {
 	font-weight: bold;
 	font-style: italic;
-	background: -moz-linear-gradient(white,rgba(0,0,0,0.2) ); /* FF 3.6+ */
+	background: -moz-linear-gradient(white,rgba(0,0,0,0.4) ); /* FF 3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%,#B2B2B2 )); /* Safari 4+, Chrome 2+ */
-	background: -webkit-linear-gradient(white,rgba(0,0,0,0.2)); /* Safari 5.1+, Chrome 10+ */
-	background: -o-linear-gradient(white,rgba(0,0,0,0.2)); /* Opera 11.10 */
+	background: -webkit-linear-gradient(white,rgba(0,0,0,0.4)); /* Safari 5.1+, Chrome 10+ */
+	background: -o-linear-gradient(white,rgba(0,0,0,0.4)); /* Opera 11.10 */
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='white', endColorstr='#B2B2B2'); /* IE6 & IE7 */
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='white', endColorstr='#B2B2B2')"; /* IE8+ */
-	background: linear-gradient(white,rgba(0,0,0,0.2)); /* the standard */
+	background: linear-gradient(white,rgba(0,0,0,0.4)); /* the standard */
 	width: 7em;
 	height: 3em;
 	color: #ffffff;
@@ -86,14 +89,11 @@ button {
 	float: right;
 }
 
-
 .homePanel {
 	font-family: Cormorant Garamond;
-	
 	background: linear-gradient(
 	rgba(0, 10, 200, 0.2),
 	rgba(0, 10, 200, 0.2)), url(../images/newbg.jpg);
-	
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -118,10 +118,12 @@ button {
 	width: 100%;
 	float: left;
 	clear: both;
+	height:50%;
+	
 }
 .contactPanel {
-	 /* This panel is used in the contact html to show the backgorund image properly */
-	height:50%;
+	/* This panel is used in the contact html to show the backgorund image properly */
+	height: 50%;
 	background: url(../images/dog_on_leash.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -164,12 +166,25 @@ button {
 }
 
 #verticalGrid {
+		visibility: hidden;
+        height: 0%;
+        width: 0%;
+}
+
+#verticalGrid> div{
 	visibility: hidden;
 	height: 0%;
+    width: 0%;
+	
+        
+	
 }
 
 #horizontalGrid {
-	visibility: visible;
+		visibility: visible;
+        position: absolute;
+        background-color: #EBEBEB;
+        top: 5em;
 }
 
 #formContainer {
@@ -180,6 +195,9 @@ button {
 	-o-background-size: cover;
 	background-size: cover;
 	opacity: 0.7;
+	font-family: Montserrat;
+	font-size: 18px;
+	text-align: right;
 }
 #aboutContainer {
 	background: url(../images/dog_bg2.jpg) no-repeat center center fixed;
@@ -193,12 +211,84 @@ button {
 #contactForm, #aboutContentTextDiv {
 	background-color: rgba(0,0,0,0.4);
 	padding: 4em;
+	font-family: Montserrat;
+	text-align: left;
 }
 
 #contactTable {
 
 	width: 50%;
 	margin: auto;
+}
+
+input[type=text] {
+	border: 2px solid #383838;
+	border-radius: 4px;
+	width: 100%;
+}
+
+select {
+	border: 2px solid #383838;
+	width: 100%;
+}
+
+textarea {
+	width: 100%;
+	height: 100px;
+}
+
+input[type=submit] {
+	font-family: Montserrat;
+	width: 70%;
+	display: flex;
+	justify-content: center;
+	padding: 5px;
+	background: #ffffff;
+	border: 2px solid #0d0d0d;
+	cursor: pointer;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	margin-left: 50px
+}
+
+input[type=submit]:hover {
+
+	background: #888;
+	font-color: #fafafa;
+}
+
+input[type=reset] {
+	font-family: Montserrat;
+	width: 70%;
+	display: flex;
+	justify-content: center;
+	padding: 5px;
+	background: #ffffff;
+	border: 2px solid #0d0d0d;
+	cursor: pointer;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	margin-left: 50px
+}
+
+input[type=reset]:hover {
+
+	background: #888;
+	font-color: #fafafa;
+}
+
+input[type=date] {
+	font-family: Montserrat;
+	border: 2px solid #383838;
+	border-radius: 4px;
+	width: 100%;
+}
+
+input[type=time] {
+	font-family: Montserrat;
+	border: 2px solid #383838;
+	border-radius: 4px;
+	width: 100%;
 }
 
 .grid-container {
@@ -210,8 +300,7 @@ button {
 }
 
 .grid-item {
-	background-color: rgba(255, 255, 255, 0.8);
-	border: 1px solid #383838;
+	background-color: #EBEBEB;
 	color: #383838;
 	font-size: 20px;
 	text-align: center;
@@ -224,7 +313,7 @@ button {
 }
 
 .leftPanel {
- /* This panel is used in the contact html left side to show the info properly */
+	/* This panel is used in the contact html left side to show the info properly */
 	width: 45%;
 	margin: 10px;
 	float: left;
@@ -233,30 +322,75 @@ button {
 }
 
 .rightPanel {
- /* This panel is used in the contact html right side to show the info properly */
+	/* This panel is used in the contact html right side to show the info properly */
 	width: 45%;
 	margin: 10px;
 	float: right;
 	height: 85%;
 	border: 1px solid black;
 }
+
+/* added opacity when hover to images in 'meet the team' page & text on homepage */
+
+img {
+	opacity: 1.0;
+	filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+img:hover {
+	opacity: 0.5;
+	filter: alpha(opacity=100); /* For IE8 and earlier */
+}
+
+h1, h2, h3 {
+
+	opacity: 0.9;
+	text-align: center;
+}
+
+/* added spacing to table for booking form */
+
+
+
+table {
+	border-spacing: 10px;
+}
+
+
+
+
 @media screen and (max-width: 800px) {
 	#contactForm {
 		width: 100%;
 		padding: 0;
 	}
-	input {
-		width: 80%;
-	}
+
 	#contactTable {
 
 		width: 100%;
 		margin: auto;
 		padding: 0;
+		font-size: small;
 	}
 	.leftTd {
-		width: 5%;
+
+		
 	}
+
+	input[type=text] ,select,textarea,input[type=date],input[type=time] {
+		width: 80%;
+		height:2em;
+	}
+	
+	
+input[type=submit],input[type=reset] {
+	
+	width: 50%;
+	float:left;
+	
+}
+
+
 	a {
 		text-decoration: none;
 		font-size: 1em;
@@ -309,53 +443,14 @@ button {
 		right: 0.5em;
 		visibility: visible;
 		display: inline;
+		z-index: 50     :
 	}
 
-	
-	 #verticalGrid{
-	 visibility:visible;
-	 position: absolute;
-	 background-color: #EBEBEB;
-		top:5em;
-	 }
-
-	 #horizontalGrid{
-	 visibility:hidden;
-	 height:0%;
-	 width:0%;
-	 }
-
-	 .grid-container {
-	 height:auto;
-	 width:100%;
-	 display: grid;
-	 grid-template-columns: auto;
-	 background-color: #EBEBEB;
-	 padding: 10px;
-	 }
-
-	 .grid-item {
-	 background-color: background-color: #EBEBEB;
-	 border: none;
-	 color: #383838;
-	 font-size: 20px;
-	 text-align: center;
-	 }
-
-	 .grid-container > img {
-	 width: 100%;
-	 height: auto;
-	 background-size: cover;
-	 }
-	 
-
-}
-@media screen and (max-width: 800px) and (orientation: portrait) {
 	#verticalGrid {
 		visibility: visible;
 		position: absolute;
 		background-color: #EBEBEB;
-		top:5em;
+		top: 5em;
 	}
 
 	#horizontalGrid {
@@ -363,6 +458,93 @@ button {
 		height: 0%;
 		width: 0%;
 	}
+
+	.grid-container {
+		height: auto;
+		width: 100%;
+		display: grid;
+		grid-template-columns: auto;
+		background-color: #EBEBEB;
+		padding: 10px;
+	}
+
+	.grid-item {
+		background-color: #EBEBEB;
+		border: none;
+		color: #383838;
+		font-size: 20px;
+		text-align: center;
+	}
+
+	.grid-container > img {
+		width: 100%;
+		height: auto;
+		background-size: cover;
+	}
+
+	#formContainer {
+
+		font-size: 1em;
+	}
+
+}
+@media screen and (max-width: 800px) and (orientation: portrait) {
+
+	.container {
+		background: url(../images/newbg.jpg) no-repeat center center fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		opacity: 0.7;
+	}
+
+
+	.homePanel {
+		background-color: rgba(0,0,0,0.4);
+		font-size: 2em;
+		color: #FDFDFD;
+		text-align: center;
+		padding: 2em;
+	}
+
+	h2, h3 {
+		font-size: 1.5em;
+		text-height: 1em;
+	}
+
+	.meetp {
+		padding: 2em;
+		text-align: justify;
+		
+	}
+	#aboutContentTextDiv{
+		text-align: justify;
+	}
+
+	#formContainer {
+
+		font-size: 1em;
+	}
+	#verticalGrid {
+		visibility: visible;
+		position: absolute;
+		background-color: #EBEBEB;
+		top: 5em;
+	}
+
+	#horizontalGrid {
+		visibility: hidden;
+		height: 0%;
+		width: 0%;
+	}
+	
+	#verticalGrid> div{
+	visibility: visible;
+        width: 100%;
+		height: auto;
+	
+}
 
 	.grid-container {
 		height: auto;
@@ -374,18 +556,64 @@ button {
 	}
 
 	.grid-item {
-		background-color: background-color: #EBEBEB;
+		background-color: #EBEBEB;
 		border: none;
 		color: #383838;
 		font-size: 20px;
 		text-align: center;
+		width: 100%;
+		height: auto;
 	}
 
 	.grid-container > img {
 		width: 100%;
 		height: auto;
 		background-size: cover;
-		margin:auto;
+		margin: auto;
+	}
+
+	.leftPanel {
+		/* This panel is used in the contact html left side to show the info properly */
+		width: 100%;
+		margin: 1em;
+		height: auto;
+		border: none;
+		overflow-y: scroll;
+	}
+
+	.contactPanel {
+		background: none;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		bottom: 0%;
+	}
+
+	.rightPanel {
+		/* This panel is used in the contact html right side to show the info properly */
+		height: 30%;
+		width: 80%;
+		right:10%;
+		margin: 0%;
+		padding: 0%;
+		position: fixed;
+		bottom: 2%;
+		border: none;
+		background-color: rgba(255,255,255,0.3);
+		color: #444444;
+		text-shadow: 1px 1px #000000;
+		border-radius: 10%;
+		font-size: small;
+		overflow-y: scroll;
+	}
+
+	#map {
+		height: 90%;
+		width: 95%;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		top: 10%;
 	}
 
 }

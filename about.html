@@ -1,50 +1,45 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Dog Walking | About</title>
+		<title>Dog Walking | About</title><!--Title in the browser toolbar-->
 
 		<link rel = "stylesheet" type = "text/css" href = "styles/restStyles.css">
+		<!--CSS link to apply style to the page-->
 		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-		<script type="text/javascript" src="behaviour/behaviour.js"></script>
+		<!--Link to google fonts to use "Montserrat"-->
+		<script type="text/javascript" src="behaviour/behaviour.js"></script><!--Javascript link to add behaviour to the page-->
+
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<!--Specifies the character encoding for the document-->
+		<meta name="msapplication-TileImage" content="images/paw.png">
+		<!--touch icons-->
+		<link rel="apple-touch-icon-precomposed" href="images/paw.png">
+		<!--touch icons-->
+		<link rel="icon" href="images/paw.png">
+		<!--icons at in the browser bar-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--viewport to handle mobile devices-->
 
 	</head>
-
+	<!-- this is used to refresh the page if resized to make sure the media queries are handled in an optimised manner
+	the method is in the  behaviour.js file-->
 	<body onresize="resize();">
 
 		<div class= "navdiv">
-
-			<button id="menubutton" onmouseover  ="toggleMenu();">
-				menu
-			</button>
-			<div id="mobilemenu" onmouseout="closeMenu();">
-				<ul id="mobilemenuul">
-					<li >
-						<a href='index.html'  class="toplinks"onclick  ="toggleMenu();">Home</a>
-					</li>
-					<li>
-						<a href='book.html' class="toplinks" onclick  ="toggleMenu();">Book Online</a>
-					</li>
-					<li>
-						<a href='meet.html' class="toplinks" onclick  ="toggleMenu();">Meet The Team</a>
-					</li>
-					<li>
-						<a href='about.html'class="toplinks" onclick  ="toggleMenu();">About</a>
-					</li>
-					<li>
-						<a href="contact.html" class="toplinks" onclick  ="toggleMenu();">Contact</a>
-					</li>
-				</ul>
-			</div>
+			<!--Navigation bar responsive design-->
+			
 
 			<div class = "topBar">
+				<!--Logo-->
 
 				<div class = "logo">
 
-					<a href="index.html"><img src="images/logo.jpg" alt="logo" style="width:250px;height:75px;"></a>
+					<a href="index.html"><img src="images/logo.jpg" alt="logo" style="width:250px;height:75px;"></a><!--Logo link to homepage-->
 
 				</div>
 
 				<div class = "menu">
+					<!--Navigation bar-->
 					<div id="home">
 						<a href = 'index.html'>Home</a>
 					</div>
@@ -74,29 +69,70 @@
 
 				<div id = "aboutContentTextDiv">
 
-					<p>
-						Life is hectic!
-					</p>
+					<h2>Our Story</h2><!--About page content-->
 					<p>
 						We are here to help with a key member of the family - your dog.
 					</p>
 					<p>
-						At doggywalks.ie, we love dogs and we love walking - and we would love to walk your dog!
+						Doggy Walks is a friend run business, operated by Dawn, Julie and Siobhan, dog lovers.
 					</p>
 					<p>
-						We can also mind your pet if you are away.
+						When we started our business in 2012, it was purely from a need to solve our own problems when we were working late away from our pets.
 					</p>
 					<p>
-						Just fill in our set up form and arrange a pick up day and time.
-						<br />
-						All of us have a lot of experience walking dogs.
+						We can walk your dog regularly or occasionally. You can relax knowing your pooch is being exercised and socialised in a safe and fun way.
 					</p>
-
+					<br>
+					<!--break in the text-->
+					<p>
+						At Doggy Walks, we promise to look after your dog as well as you would while he/she is in our care.
+					</p>
+					<p>
+						Your dog can be walked solo or with other dogs, it's entirely up to you.
+					</p>
+					<p>
+						Every member of staff has a lot of experience walking dogs.
+					</p>
+					<p>
+						Just fill in our simple booking form, arrange a pick up day and time, and we will partner you with the perfect dog walker in your location.
+					</p>
 				</div>
+
 
 			</div>
 
 		</div>
+		
+		
+		<!--navigation section  do not move-->
+
+		<!-- the menubutton only shows for devices under 800px  it is used to display the menu-->
+		
+		<!-- the menubutton only shows for devices under 800px  it is used to display the menu-->
+			<button id="menubutton" onmouseover  ="toggleMenu();">
+				menu
+			</button>
+			<div id="mobilemenu" onmouseout="closeMenu();">
+				<!-- the mobilemenuul list is swapped with the menu div  for devices under 800px with a media query-->
+				<ul id="mobilemenuul">
+					<li >
+						<a href='index.html'  class="toplinks"onclick  ="toggleMenu();">Home</a>
+					</li>
+					<li>
+						<a href='book.html' class="toplinks" onclick  ="toggleMenu();">Book Online</a>
+					</li>
+					<li>
+						<a href='meet.html' class="toplinks" onclick  ="toggleMenu();">Meet The Team</a>
+					</li>
+					<li>
+						<a href='about.html'class="toplinks" onclick  ="toggleMenu();">About</a>
+					</li>
+					<li>
+						<a href="contact.html" class="toplinks" onclick  ="toggleMenu();">Contact</a>
+					</li>
+				</ul>
+			</div>
+<!-- end of navigation section -->
 
 	</body>
 
