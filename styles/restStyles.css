@@ -99,7 +99,7 @@ button {
 	background-attachment: fixed;
 	background-size: cover;
 	padding: 4em;
-	width: 100%;
+	/*width: 100%;*/
 	height: auto;
 	font-size: 40px;
 	color: #FDFDFD;
@@ -111,7 +111,7 @@ button {
 .panel {
 	font-family: Cormorant Garamond;
 	font-size: 20px;
-	color: #FDFDFD;
+	/*color: #FDFDFD;*/
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
@@ -187,6 +187,7 @@ button {
         top: 5em;
 }
 
+
 #formContainer {
 
 	background: url(../images/dog_on_leash.jpg) no-repeat center center fixed;
@@ -198,7 +199,13 @@ button {
 	font-family: Montserrat;
 	font-size: 18px;
 	text-align: right;
+	color: white;
 }
+
+
+
+
+
 #aboutContainer {
 	background: url(../images/dog_bg2.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
@@ -206,20 +213,49 @@ button {
 	-o-background-size: cover;
 	background-size: cover;
 	opacity: 0.7;
+	color: #FDFDFD
 }
+
+
+
+
+#meetContainer{
+	font-family: Montserrat;
+	text-align: center;
+	color: #EBEBEB
+	
+}
+
+
 
 #contactForm, #aboutContentTextDiv {
 	background-color: rgba(0,0,0,0.4);
 	padding: 4em;
 	font-family: Montserrat;
 	text-align: left;
+	color: white;
+
 }
+
+
+#aboutContentTextDiv > h1{
+	text-align: left;
+	color: #FDFDFD;
+	opacity: 0.9
+}
+
+
 
 #contactTable {
 
 	width: 50%;
 	margin: auto;
 }
+
+
+
+
+
 
 input[type=text] {
 	border: 2px solid #383838;
@@ -342,10 +378,17 @@ img:hover {
 	filter: alpha(opacity=100); /* For IE8 and earlier */
 }
 
-h1, h2, h3 {
+h1{
+	text-align: center;
+	color: #383838;
+	opacity: 0.9;
+}
+
+
+h2, h3 {
 
 	opacity: 0.9;
-	text-align: center;
+
 }
 
 /* added spacing to table for booking form */
