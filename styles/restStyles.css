@@ -229,8 +229,6 @@ button {
 	margin: auto;
 }
 
-
-
 #inputMessage {
 	height: 100px;
 }
@@ -332,12 +330,12 @@ input[type=time] {
 /* added opacity when hover to images in 'meet the team' page & text on homepage */
 
 img:hover {
-	opacity: 1.0;
+	opacity: 0.5;
 	filter: alpha(opacity=50); /* For IE8 and earlier */
 }
 
-img{
-	opacity: 0.5;
+img {
+	opacity: 1.0;
 	filter: alpha(opacity=100); /* For IE8 and earlier */
 }
 
@@ -397,12 +395,14 @@ table {
 	right: 2%;
 	margin: 0%;
 	padding: 0%;
+	font-family: Montserrat;
+	color: white;
 	border: 1px solid black;
 }
 
 #map {
 	height: 100%;
-	width: 95%;
+	width: 100%;
 	margin: 0;
 	padding: 0;
 	position: absolute;
@@ -489,7 +489,7 @@ table {
 		right: 0.5em;
 		visibility: visible;
 		display: inline;
-		z-index: 50      :
+		z-index: 50       :
 	}
 
 	#verticalGrid {
