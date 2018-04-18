@@ -14,6 +14,10 @@ body {
 	padding: 10px;
 	float: left;
 }
+.topLogo {
+	width: 250px;
+	height: 75px;
+}
 
 .container {
 	background-image: none;
@@ -118,18 +122,7 @@ button {
 	width: 100%;
 	float: left;
 	clear: both;
-	height:50%;
-	
-}
-.contactPanel {
-	/* This panel is used in the contact html to show the backgorund image properly */
 	height: 50%;
-	background: url(../images/dog_on_leash.jpg) no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	opacity: 0.7;
 }
 
 #home {
@@ -166,27 +159,23 @@ button {
 }
 
 #verticalGrid {
-		visibility: hidden;
-        height: 0%;
-        width: 0%;
-}
-
-#verticalGrid> div{
 	visibility: hidden;
 	height: 0%;
-    width: 0%;
-	
-        
-	
+	width: 0%;
+}
+
+#verticalGrid > div {
+	visibility: hidden;
+	height: 0%;
+	width: 0%;
 }
 
 #horizontalGrid {
-		visibility: visible;
-        position: absolute;
-        background-color: #EBEBEB;
-        top: 5em;
+	visibility: visible;
+	position: absolute;
+	background-color: #EBEBEB;
+	top: 5em;
 }
-
 
 #formContainer {
 
@@ -202,10 +191,6 @@ button {
 	color: white;
 }
 
-
-
-
-
 #aboutContainer {
 	background: url(../images/dog_bg2.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
@@ -216,17 +201,11 @@ button {
 	color: #FDFDFD
 }
 
-
-
-
-#meetContainer{
+#meetContainer {
 	font-family: Montserrat;
 	text-align: center;
 	color: #EBEBEB
-	
 }
-
-
 
 #contactForm, #aboutContentTextDiv {
 	background-color: rgba(0,0,0,0.4);
@@ -234,17 +213,15 @@ button {
 	font-family: Montserrat;
 	text-align: left;
 	color: white;
-
 }
 
-
-#aboutContentTextDiv > h1{
+#aboutContentTextDiv > h1 {
 	text-align: left;
 	color: #FDFDFD;
 	opacity: 0.9
 }
 
-
+/* book/ form page specific styles for desktop*/
 
 #contactTable {
 
@@ -254,8 +231,12 @@ button {
 
 
 
-
-
+#inputMessage {
+	height: 100px;
+}
+#inputAdress {
+	height: 80px;
+}
 
 input[type=text] {
 	border: 2px solid #383838;
@@ -348,59 +329,85 @@ input[type=time] {
 	background-size: cover;
 }
 
-.leftPanel {
-	/* This panel is used in the contact html left side to show the info properly */
-	width: 45%;
-	margin: 10px;
-	float: left;
-	height: 85%;
-	border: 1px solid black;
-}
-
-.rightPanel {
-	/* This panel is used in the contact html right side to show the info properly */
-	width: 45%;
-	margin: 10px;
-	float: right;
-	height: 85%;
-	border: 1px solid black;
-}
-
 /* added opacity when hover to images in 'meet the team' page & text on homepage */
 
-img {
+img:hover {
 	opacity: 1.0;
 	filter: alpha(opacity=50); /* For IE8 and earlier */
 }
 
-img:hover {
+img{
 	opacity: 0.5;
 	filter: alpha(opacity=100); /* For IE8 and earlier */
 }
 
-h1{
+h1 {
 	text-align: center;
 	color: #383838;
 	opacity: 0.9;
 }
 
-
 h2, h3 {
 
 	opacity: 0.9;
-
 }
 
 /* added spacing to table for booking form */
-
-
 
 table {
 	border-spacing: 10px;
 }
 
+/* contact/map page specific styles for desktop*/
 
+#contactInfoDiv {
+	padding-top: 4%;
+}
 
+.contactPanel {
+
+	background: url(../images/dog_on_leash.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	opacity: 0.7;
+	position: absolute;
+	height: 80%;
+	width: 100%;
+	bottom: 0%;
+}
+
+.leftPanel {
+	/* This panel is used in the contact html left side to show the info properly */
+	width: 45%;
+	position: absolute;
+	height: 90%;
+	left: 2%;
+	overflow-y: scroll;
+	border: 1px solid black;
+}
+
+.rightPanel {
+	/* This panel is used in the contact html right side to show the info properly */
+
+	position: absolute;
+	height: 90%;
+	width: 45%;
+	right: 2%;
+	margin: 0%;
+	padding: 0%;
+	border: 1px solid black;
+}
+
+#map {
+	height: 100%;
+	width: 95%;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 0%;
+}
 
 @media screen and (max-width: 800px) {
 	#contactForm {
@@ -417,22 +424,18 @@ table {
 	}
 	.leftTd {
 
-		
 	}
 
-	input[type=text] ,select,textarea,input[type=date],input[type=time] {
+	input[type=text], select, textarea, input[type=date], input[type=time] {
 		width: 80%;
-		height:2em;
+		height: 2em;
 	}
-	
-	
-input[type=submit],input[type=reset] {
-	
-	width: 50%;
-	float:left;
-	
-}
 
+	input[type=submit], input[type=reset] {
+
+		width: 50%;
+		float: left;
+	}
 
 	a {
 		text-decoration: none;
@@ -486,7 +489,7 @@ input[type=submit],input[type=reset] {
 		right: 0.5em;
 		visibility: visible;
 		display: inline;
-		z-index: 50     :
+		z-index: 50      :
 	}
 
 	#verticalGrid {
@@ -542,7 +545,6 @@ input[type=submit],input[type=reset] {
 		opacity: 0.7;
 	}
 
-
 	.homePanel {
 		background-color: rgba(0,0,0,0.4);
 		font-size: 2em;
@@ -559,9 +561,8 @@ input[type=submit],input[type=reset] {
 	.meetp {
 		padding: 2em;
 		text-align: justify;
-		
 	}
-	#aboutContentTextDiv{
+	#aboutContentTextDiv {
 		text-align: justify;
 	}
 
@@ -581,13 +582,12 @@ input[type=submit],input[type=reset] {
 		height: 0%;
 		width: 0%;
 	}
-	
-	#verticalGrid> div{
-	visibility: visible;
-        width: 100%;
+
+	#verticalGrid > div {
+		visibility: visible;
+		width: 100%;
 		height: auto;
-	
-}
+	}
 
 	.grid-container {
 		height: auto;
@@ -619,7 +619,6 @@ input[type=submit],input[type=reset] {
 		/* This panel is used in the contact html left side to show the info properly */
 		width: 100%;
 		margin: 1em;
-		height: auto;
 		border: none;
 		overflow-y: scroll;
 	}
@@ -636,7 +635,7 @@ input[type=submit],input[type=reset] {
 		/* This panel is used in the contact html right side to show the info properly */
 		height: 30%;
 		width: 80%;
-		right:10%;
+		right: 10%;
 		margin: 0%;
 		padding: 0%;
 		position: fixed;
