@@ -20,12 +20,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<style>
-			html, body, #map {
+
+			html, body, #map { /* this is used to show the map inside its own div */
 				height: 100%;
 				width: 100%;
 				margin: 0;
 				padding: 0;
 			}
+
 		</style>
 	</head>
 	<!-- this is used to refresh the page if resized to make sure the media queries are handled in an optimised manner
@@ -74,48 +76,42 @@
 				<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 				<!-- Here the script is loaded-->
 				<script type="text/javascript">
-					var element = document.getElementById("map");
-					var map = new google.maps.Map(element, {
-						center : new google.maps.LatLng(53.3489867, -6.2434582), /* we insert the default values of the location */
-						zoom : 16, /* zoom level is entered to show the position appropriately*/
-						mapTypeId : "OSM",
-						mapTypeControl : true,
-						streetViewControl : true
-					});
-					map.mapTypes.set("OSM", new google.maps.ImageMapType({
-						getTileUrl : function(coord, zoom) {
-							var tilesPerGlobe = 1 << zoom;
-							var x = coord.x % tilesPerGlobe;
-							if (x < 0) {
-								x = tilesPerGlobe + x;
-							}
-							return "http://tile.openstreetmap.org/" + zoom + "/" + x + "/" + coord.y + ".png";
-						},
-						tileSize : new google.maps.Size(256, 256),
-						name : "OpenStreetMap",
-						maxZoom : 18
-					}));
+							var element = document.getElementById("map"); 
+							var map = new google.maps.Map(element, {
+								center: new google.maps.LatLng(53.3489867,-6.2434582), // we insert the default values of the location -->
+								zoom: 16,   // level is entered to show the position appropriately-->
+								mapTypeId: "OSM",
+								mapTypeControl: true,
+								streetViewControl: true}); 
+							map.mapTypes.set("OSM", new google.maps.ImageMapType({
+								getTileUrl: function(coord, zoom) {
+									var tilesPerGlobe = 1 << zoom;
+									var x = coord.x % tilesPerGlobe;
+									if (x < 0) {
+										x = tilesPerGlobe+x;}
+									return "http://tile.openstreetmap.org/" + zoom + "/" + x + "/" + coord.y + ".png";
+								},
+								marker : new google.maps.Marker({
+        								position: {lat: 53.3489867, lng:-6.2434582},
+          								map: map,
+        						   		title: 'Hello World!'
+        						}),
+								tileSize: new google.maps.Size(256, 256),
+								name: "OpenStreetMap",
+								maxZoom: 18
+							}));
 				</script>
 
 			</div>
-
-			<div class = "rightPanel">
-				<!-- The addresss is showed in this panel-->
-
-				<p style="padding-top: 15%;">
-					Doggy Walks
-				</p>
-				<!-- Some space is entered as a padding to center the text -->
-				<p>
-					IFSC
-				</p>
-				<p>
-					Mayor Street, North Dock
-				</p>
-				<p>
-					Dublin 1, D01 Y300
-				</p>
-
+			
+			<div class = "rightPanel"> <!-- The addresss is showed in this panel-->
+				
+				<p style="padding-top: 4%;"> Doggy Walks </p>  <!-- Some space is entered as a padding to center the text -->
+				<p>IFSC</p>
+				<p>Mayor Street, North Dock</p>
+				<p>Dublin 1, D01 Y300</p>
+				<p></p>
+				
 			</div>
 
 		</div>
