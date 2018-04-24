@@ -186,7 +186,7 @@ button {
 	background-size: cover;
 	opacity: 0.7;
 	font-family: Montserrat;
-	font-size: 18px;
+	font-size: 15px;
 	text-align: right;
 	color: white;
 }
@@ -227,6 +227,7 @@ button {
 
 	width: 50%;
 	margin: auto;
+	
 }
 
 #inputMessage {
@@ -240,6 +241,14 @@ input[type=text] {
 	border: 2px solid #383838;
 	border-radius: 4px;
 	width: 100%;
+	padding: 3px;
+}
+
+input[type=email] {
+	border: 2px solid #383838;
+	border-radius: 4px;
+	width: 100%;
+	padding: 3px;
 }
 
 select {
@@ -269,7 +278,7 @@ input[type=submit] {
 input[type=submit]:hover {
 
 	background: #888;
-	font-color: #fafafa;
+	color: #fafafa;
 }
 
 input[type=reset] {
@@ -289,7 +298,7 @@ input[type=reset] {
 input[type=reset]:hover {
 
 	background: #888;
-	font-color: #fafafa;
+	color: #fafafa;
 }
 
 input[type=date] {
@@ -297,6 +306,7 @@ input[type=date] {
 	border: 2px solid #383838;
 	border-radius: 4px;
 	width: 100%;
+	
 }
 
 input[type=time] {
@@ -305,6 +315,9 @@ input[type=time] {
 	border-radius: 4px;
 	width: 100%;
 }
+
+
+
 
 .grid-container {
 	display: grid;
@@ -422,11 +435,13 @@ table {
 		padding: 0;
 		font-size: small;
 	}
+	
+	
 	.leftTd {
 
 	}
 
-	input[type=text], select, textarea, input[type=date], input[type=time] {
+	input[type=text], select, textarea, input[type=date], input[type=time], input[type=email] {
 		width: 80%;
 		height: 2em;
 	}
